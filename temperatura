@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class MatrizTemperaturas {
+    public static void main(String[] args) {
+        String[] ciudades = {"Bogotá", "Cali", "Medellín", "Pasto", "Barranquilla", "Manizales"};
+        int dias = 7;
+        double[][] temperaturas = new double[ciudades.length][dias];
+        Random random = new Random();
+
+        for (int i = 0; i < ciudades.length; i++) {
+            for (int j = 0; j < dias; j++) {
+                temperaturas[i][j] = 10.0 + (35.0 - 10.0) * random.nextDouble();
+            }
+        }
+
+        System.out.println("Temperaturas en las ciudades por día:");
+        for (int i = 0; i < ciudades.length; i++) {
+            System.out.println("Ciudad: " + ciudades[i]);
+            for (int j = 0; j < dias; j++) {
+                System.out.println("  Día " + (j + 1) + ": " + temperaturas[i][j] + "°C");
+            }
+            System.out.println();
+        }
+    }
+}
