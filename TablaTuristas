@@ -46,6 +46,13 @@ public class TablaTuristas{
   public static int mesMasTuristas(int[][] matriz)
    {
 
+    // declarar un arreglo para guardar las sumas de los meses:
+    int [] suma_meses = new int [12];
+
+    // recorremos las filas y sumamos:
+
+    //obtenemos cual es la fila con el mayor valor sumado 
+
 
    }
 
