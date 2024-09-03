@@ -1,0 +1,44 @@
+public class Turistasciudades {
+    public static void main(String[] args) {
+        String[] ciudades = {"Cali", "Medellín", "Bogotá", "Barranquilla"};
+        String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+        int[][] turistas = new int[4][12];
+
+        turistas[0][1] = 500;  // Cali - Febrero
+        turistas[0][11] = 700; // Cali - Diciembre
+        turistas[1][5] = 6500; // Medellín - Junio
+        turistas[2][0] = 0;    // Bogotá - todos los meses
+        turistas[3][1] = 6800; // Barranquilla - Febrero
+
+        int mesMayor = 0;
+        int maxTuristasMes = 0;
+
+        for (int j = 0; j < 12; j++) {
+            int totalTuristasMes = 0;
+            for (int i = 0; i < 4; i++) {
+                totalTuristasMes += turistas[i][j];
+            }
+            if (totalTuristasMes > maxTuristasMes) {
+                maxTuristasMes = totalTuristasMes;
+                mesMayor = j;
+            }
+        }
+
+        int ciudadMayor = 0;
+        int maxTuristasCiudad = 0;
+
+        for (int i = 0; i < 4; i++) {
+            int totalTuristasCiudad = 0;
+            for (int j = 0; j < 12; j++) {
+                totalTuristasCiudad += turistas[i][j];
+            }
+            if (totalTuristasCiudad > maxTuristasCiudad) {
+                maxTuristasCiudad = totalTuristasCiudad;
+                ciudadMayor = i;
+            }
+        }
+
+        System.out.println("Mes con más turistas en todas las ciudades: " + meses[mesMayor]);
+        System.out.println("Ciudad con más visitantes en todo el año: " + ciudades[ciudadMayor]);
+    }
+}
