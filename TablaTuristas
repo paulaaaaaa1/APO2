@@ -1,0 +1,73 @@
+import java.util.Random;
+
+public class TablaTuristas{ 
+    public static void main(Straing [] args)
+    { 
+        int[][] matriz_turistas=new int[12][4];
+        matriz_turistas = llenarMatriz();
+    }
+    /**
+     * Funcion que llena una matriz entera con datos aleatorios 
+     * y la retorna
+     * @return
+     */
+
+   public static int[][] llenarMatriz()
+
+   public static void imprimirMatriz(int[][] matriz)
+  {
+
+  }
+
+  public static int ciudadMasTuristas(int[][] matriz)
+  {
+    int suma_cali=0, suma_med=0, suma_bog=0, suma_baq=0;
+    //recorrer cada columna de la matriz y sumarla
+    for(int i=0; i<12; i++)
+    {
+        //guardar la suma
+        suma_cali = suma_cali + matriz[i][0];
+        suma_med = suma_med + matriz[i][1];
+        suma_bog = suma_bog + matriz[i][2];
+        suma_baq = suma_baq + matri[i][3];
+
+    }
+    //indicar cual suma es mayor 
+    if(suma_cali > suma_med && suma_cali > suma_bog && suma_cali > suma_baq)
+        valor_retorno = "cali";
+    else if(suma_med > suma_cali && suma_med > suma_bog && suma_med > suma_baq)
+        valor_retorno = "medellin";
+    else if(suma_bog > suma_cali && suma_bog > suma_med && suma_bog > suma_baq)
+        valor_retorno = "bogota"; 
+    else if(suma_baq > suma_cali && suma_baq > suma_med && suma_baq > suma_bog)
+         valor_retorno = "barranquilla";
+  }
+   
+  public static int mesMasTuristas(int[][] matriz)
+   {
+
+
+   }
+
+
+
+    //declarar e inicializar:
+    int filas= 12, cols=4;
+    int[][] nuevaMatriz = new int [12][4];
+
+    Random numeros_alea=new Random();
+
+
+    // recorer para llenar:
+    for(int i=0; i < filas; i++)
+    { 
+        for(int j= 0; j< cols; j++)
+        {
+            nuevaMatriz[i][j]= numeros_alea.nextInt(math.abs(500));
+        }
+    }
+    //retornar 
+    return nuevaMatri;
+    
+  }
+}
