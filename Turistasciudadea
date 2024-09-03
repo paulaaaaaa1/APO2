@@ -1,3 +1,5 @@
+import java.util. Scanner;
+
 public class Turistasciudades {
     public static void main(String[] args) {
         String[] ciudades = {"Cali", "Medellín", "Bogotá", "Barranquilla"};
@@ -42,3 +44,4 @@ public class Turistasciudades {
         System.out.println("Ciudad con más visitantes en todo el año: " + ciudades[ciudadMayor]);
     }
 }
+
