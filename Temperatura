@@ -1,22 +1,15 @@
-import java.util.Random;
-
-public class TemperaturasCiudades {
+public class TablaConversionTemperatura {
     public static void main(String[] args) {
-        String[] ciudades = {"Bogotá", "Cali", "Medellín", "Pasto", "Barranquilla", "Manizales"};
-        double[][] temperaturas = new double[6][7];
-        Random aleatorio = new Random();
+        int inicioCelsius = 0;
+        int finCelsius = 100;
+        int paso = 5;
 
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 7; j++) {
-                temperaturas[i][j] = 10 + aleatorio.nextDouble() * 25;
-            }
-        }
+        System.out.println("Celsius   |   Fahrenheit");
+        System.out.println("------------------------");
 
-        for (int i = 0; i < 6; i++) {
-            System.out.println("Temperaturas de " + ciudades[i] + ":");
-            for (int j = 0; j < 7; j++) {
-                System.out.println("Día " + (j + 1) + ": " + temperaturas[i][j] + "°C");
-            }
-            System.out.println();
+        for (int celsius = inicioCelsius; celsius <= finCelsius; celsius += paso) {
+            double fahrenheit = celsius * 9.0 / 5.0 + 32;
+            System.out.println(celsius + "         |   " + fahrenheit);
         }
     }
+}
