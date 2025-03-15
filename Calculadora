@@ -1,31 +1,63 @@
-import java.util.Scanner;
+#include <stdio.h>
 
-public class Calculadora {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Ingresa el primer número:");
-        double num1 = scanner.nextDouble();
-
-        System.out.println("Ingresa el segundo número:");
-        double num2 = scanner.nextDouble();
-
-        System.out.println("Elige la operación (+, -, *):");
-        char operacion = scanner.next().charAt(0);
-
-        double resultado = 0;
-
-        if (operacion == '+') {
-            resultado = num1 + num2;
-        } else if (operacion == '-') {
-            resultado = num1 - num2;
-        } else if (operacion == '*') {
-            resultado = num1 * num2;
-        } else {
-            System.out.println("Operación no válida");
+int main()
+{
+    char Nombre_cliente; 
+    char Descripcion;
+    char Requerimiento;
+    char Direccion;
+    int Num_producto;
+    int cantidad;
+    char Tipo;
+    printf("Bienvenbido a USC");
+    printf("se realizo la solicitud del requerimiento?");
+    int opc
+    if(opc){
+        printf ("Ingrese nombre del cliente:"/n)
+        scanf("%s", Nombre_cliente);
+        if(Nombre_cliente!= Nombre_cliente){
+            Printf("El nombre del cliente Ingresado no concuerda");
+        }if else{
+            continue;
         }
-
-        System.out.println("El resultado es: " + resultado);
+        printf("Ingrese direccion del cliente:"\n);
+        scanf("%s", Direccion);
+        if(Direccion!= Direccion){
+            printf("La direccion del cliente ingresada no concuerda");
+        }if else{
+            continue;
+        }
+        printf("Ingrese el numero del producto:"\n);
+        Scanf("%s", Num_producto);
+        if(Num_producto!=Num_producto){
+            printf("El  Ingresado no concuerda");
+        }if else{
+            continue;
+        }
+        printf("Ingrese cantidad de requerimiento(s)"\n);
+        scanf("%d", cantidad);
+        if(Num_producto!=Num_producto){
+            printf("El numero del producto ingresado no concuerda");
+        }if else{
+            continue;
+        }
+        printf("Ingrese tipo de requerimiento:"\n);
+        scanf("%s", Tipo);
+        if(Tipo!=Tipo){
+            printf("El tipo del producto ingresado no concuerda");
+        }if else{
+            continue;
+        }
+        printf("Ingrese Descripcion del requerimiento"\n);
+        scanf("%s", Descripcion);
+        if(Num_producto!=Num_producto){
+            printf("La descripcion del producto ingresado no concuerda");
+        }if else{
+            continue;
+        }
+    }if (opc=2){
+        
     }
+    return 0;
 }
 
